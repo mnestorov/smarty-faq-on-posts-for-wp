@@ -1,0 +1,1 @@
+# smarty-faq-manager-for-wp

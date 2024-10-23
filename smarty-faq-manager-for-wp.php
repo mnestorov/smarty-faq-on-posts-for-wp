@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name: Smarty - FAQ manager for WordPress
- * Plugin URI:  https://github.net/mnestorov/smarty-faq-manager-for-wp
+ * Plugin Name: SM - FAQ on Posts for WordPress
+ * Plugin URI:  https://github.com/mnestorov/smarty-faq-on-posts-for-wp
  * Description: Generates google product and product review feeds for Google Merchant Center.
  * Version:     1.0.0
- * Author:      Martin Nestorov
- * Author URI:  https://github.net/mnestorov
+ * Author:      Smarty Studio | Martin Nestorov
+ * Author URI:  https://github.com/mnestorov
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: smarty-faq-manager-for-wp
+ * Text Domain: smarty-faq-on-post-for-wp
  */
 
 // If this file is called directly, abort.

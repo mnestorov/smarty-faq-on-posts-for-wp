@@ -2,7 +2,7 @@
 /**
  * Plugin Name: SM - FAQ on Posts for WordPress
  * Plugin URI:  https://github.com/mnestorov/smarty-faq-on-posts-for-wp
- * Description: Generates google product and product review feeds for Google Merchant Center.
+ * Description: This plugin allows you to easily add and manage FAQs within individual WordPress posts.
  * Version:     1.0.0
  * Author:      Martin Nestorov
  * Author URI:  https://github.com/mnestorov

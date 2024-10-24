@@ -30,8 +30,8 @@ function smarty_enqueue_admin_assets() {
     global $pagenow;
 
     if ($pagenow == 'post.php' || $pagenow == 'post-new.php') {
-        wp_enqueue_style('smarty-fop-admin-css', plugin_dir_url(__FILE__) . 'assets/css/admin.css', array(), '1.0.0');
-        wp_enqueue_script('smarty-fop-admin-js', plugin_dir_url(__FILE__) . 'assets/js/admin.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_style('smarty-fop-admin-css', plugin_dir_url(__FILE__) . 'css/smarty-fop-admin.css', array(), '1.0.0');
+        wp_enqueue_script('smarty-fop-admin-js', plugin_dir_url(__FILE__) . 'js/smarty-fop-admin.js', array('jquery'), '1.0.0', true);
     }
 }
 add_action('admin_enqueue_scripts', 'smarty_enqueue_admin_assets');

@@ -8,7 +8,7 @@
 
 h3.smarty-faq-title {
     font-family: "Alethia Pro", Sans-serif;
-    font-size: 26px;
+    font-size: 26px !important;
     text-align: center;
     margin-bottom: 20px;
     color: #222222;
@@ -33,17 +33,12 @@ h3.smarty-faq-title {
     transition: color 0.3s;
 }
 
-.smarty-faq-question {
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
 h4.smarty-faq-question {
-    font-size: 20px;
+    font-size: 20px !important;
     font-weight: normal;
     color: inherit;
+    cursor: pointer;
+    transition: color 0.3s;
     margin: 0;
 }
 

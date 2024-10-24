@@ -1,0 +1,65 @@
+.smarty-faqs {
+    margin: 60px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+h3.smarty-faq-title {
+    font-family: "Alethia Pro", Sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222222;
+}
+
+.smarty-faq-item {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.smarty-faq-question-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.smarty-faq-icon {
+    margin-right: 10px;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.smarty-faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+h4.smarty-faq-question {
+    font-size: 20px;
+    font-weight: normal;
+    color: inherit;
+    margin: 0;
+}
+
+.smarty-faq-question-wrapper:hover .smarty-faq-question,
+.smarty-faq-question-wrapper:hover .smarty-faq-icon {
+    color: #d2b885;
+}
+
+.smarty-faq-answer {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #222222;
+    padding: 0 40px 10px 40px;
+    display: none;
+}
+
+.smarty-faq-answer p {
+    margin-bottom: 10px;
+}

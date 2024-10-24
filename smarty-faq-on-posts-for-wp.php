@@ -16,6 +16,12 @@ if (!defined('WPINC')) {
 	die;
 }
 
+// Load plugin textdomain for translations
+function smarty_load_textdomain() {
+    load_plugin_textdomain('smarty-faq-on-post-for-wp', false, dirname(plugin_basename(__FILE__)) . '/languages');
+}
+add_action('init', 'smarty_load_textdomain');
+
 // Enqueue public styles and scripts
 function smarty_enqueue_public_assets() {
     if (is_singular('post')) {
@@ -40,7 +46,7 @@ add_action('admin_enqueue_scripts', 'smarty_enqueue_admin_assets');
 function smarty_add_faq_meta_box() {
     add_meta_box(
         'smarty_faq_meta_box', 
-        'FAQs', 
+        __('FAQs', 'smarty-faq-on-post-for-wp'),
         'smarty_faq_meta_box_callback', 
         'post', 
         'normal', 
@@ -59,7 +65,7 @@ function smarty_faq_meta_box_callback($post) {
     $faq_section_title = get_post_meta($post->ID, '_smarty_faq_section_title', true);
 
     // Custom FAQ Section Title
-    echo '<p><label for="smarty_faq_section_title">FAQ Section Title:</label>';
+    echo '<p><label for="smarty_faq_section_title">' . __('FAQ Section Title:', 'smarty-faq-on-post-for-wp') . '</label>';
     echo '<input type="text" name="smarty_faq_section_title" id="smarty_faq_section_title" value="' . esc_attr($faq_section_title) . '" style="width: 100%;"></p>';
 
     // Display existing FAQs
@@ -68,20 +74,20 @@ function smarty_faq_meta_box_callback($post) {
             ?>
             <div class="smarty-custom-faq <?php echo ($index % 2 == 0) ? 'even' : 'odd'; ?>" data-index="<?php echo $index; ?>">
                 <div class="smarty-faq-header">
-                    <h4>FAQ <?php echo ($index + 1); ?> - <span class="faq-title"><?php echo esc_html($faq['question']); ?></span></h4>
-                    <button type="button" class="button button-secondary smarty-toggle-faq">Toggle</button>
+                    <h4><?php printf(__('FAQ %d -', 'smarty-faq-on-post-for-wp'), ($index + 1)); ?> <span class="faq-title"><?php echo esc_html($faq['question']); ?></span></h4>
+                    <button type="button" class="button button-secondary smarty-toggle-faq"><?php _e('Toggle', 'smarty-faq-on-post-for-wp'); ?></button>
                 </div>
                 <div class="smarty-faq-content" style="display: none;">
                     <p>
-                        <label>Question:</label><br>
+                        <label><?php _e('Question:', 'smarty-faq-on-post-for-wp'); ?></label><br>
                         <input type="text" name="_smarty_faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" style="width: 100%;">
                     </p>
                     <p>
-                        <label>Answer:</label><br>
+                        <label><?php _e('Answer:', 'smarty-faq-on-post-for-wp'); ?></label><br>
                         <textarea name="_smarty_faqs[<?php echo $index; ?>][answer]" style="width: 100%;"><?php echo esc_textarea($faq['answer']); ?></textarea>
                     </p>
                     <input type="hidden" name="_smarty_faqs[<?php echo $index; ?>][delete]" value="0" class="smarty-delete-input">
-                    <button type="button" class="button button-secondary smarty-remove-faq-button">Remove FAQ</button>
+                    <button type="button" class="button button-secondary smarty-remove-faq-button"><?php _e('Remove FAQ', 'smarty-faq-on-post-for-wp'); ?></button>
                 </div>
             </div>
             <?php
@@ -89,7 +95,7 @@ function smarty_faq_meta_box_callback($post) {
     }
     ?>
     <div id="smarty_faqs_container"></div>
-    <button type="button" id="smarty_add_faq_button" class="button button-primary">Add FAQ</button><?php
+    <button type="button" id="smarty_add_faq_button" class="button button-primary"><?php _e('Add FAQ', 'smarty-faq-on-post-for-wp'); ?></button><?php
 }
 
 // Save FAQs and custom title when the post is saved
@@ -131,7 +137,7 @@ function smarty_display_faqs($content) {
             if (!empty($faq_section_title)) {
                 $content .= '<h3 class="smarty-faq-title">' . esc_html($faq_section_title) . '</h3>';
             } else {
-                $content .= '<h3 class="smarty-faq-title">FAQs</h3>';
+                $content .= '<h3 class="smarty-faq-title">' . __('FAQs', 'smarty-faq-on-post-for-wp') . '</h3>';
             }
 
             $faq_schema = array(

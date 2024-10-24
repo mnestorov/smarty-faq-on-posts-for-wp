@@ -1,0 +1,71 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SM - FAQ on Posts for WordPress\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-24 05:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: smarty-faq-on-post-for-wp"
+
+#: smarty-faq-on-posts-for-wp.php:98
+msgid "Add FAQ"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:86
+msgid "Answer:"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:77
+msgid "FAQ %d -"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:68
+msgid "FAQ Section Title:"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:49 smarty-faq-on-posts-for-wp.php:140
+msgid "FAQs"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/mnestorov"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/mnestorov/smarty-faq-on-posts-for-wp"
+msgstr ""
+
+#. Author of the plugin
+msgid "Martin Nestorov"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:82
+msgid "Question:"
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:90
+msgid "Remove FAQ"
+msgstr ""
+
+#. Name of the plugin
+msgid "SM - FAQ on Posts for WordPress"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This plugin allows you to easily add and manage FAQs within individual "
+"WordPress posts."
+msgstr ""
+
+#: smarty-faq-on-posts-for-wp.php:78
+msgid "Toggle"
+msgstr ""
